@@ -1,0 +1,10 @@
+li a{
+    color:white;
+}
+body{
+    background:  url("images/background.jpg") no-repeat;
+    background-size: 1550px 740px;
+}
+ul{
+    font-size: 30px;
+}

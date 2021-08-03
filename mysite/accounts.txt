@@ -1,0 +1,10 @@
+
+---------admin log----------------
+user    -> admin
+password-> admin
+----------------------------------
+--------super user----------------
+user    -> abiram 
+email   -> abiramashok@gmail.com
+password-> angevil@311
+---------------------------------- 

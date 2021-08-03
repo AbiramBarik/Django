@@ -1,0 +1,7 @@
+<h1 style="text-align: center;">LOG IN</h1>
+<form method="post" style="background-color: red; color:white;text-align:center;font-size:30px;"><br/>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <a href="{% url 'password_change' %}">change password</a>
+    <button type="submit" style="height:50px; width:100px; font-size:20px; ">Log In</button><br><hr>
+</form>

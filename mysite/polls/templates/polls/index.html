@@ -1,0 +1,27 @@
+{% block content %}
+{% if user.is_authenticated %}
+  <h1>Hi {{ user.username }}!
+  <a href="{% url 'logout' %}">
+  <button style="background-color:cyan;
+  border: none;
+  color: black;
+  padding: 6px 10px;
+  text-align: center;
+  font-size: 16px;
+  float:right">Log Out</button></a></h1>
+  {% load static%}
+  <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">   
+  {% if latest_question_list %}
+      <ul>
+      {% for question in latest_question_list %}
+        <li><a href="{%url 'polls:detail' question.id%}">{{ question.question_text }}</a></li>
+      {% endfor %}
+      </ul>
+  {% else %}
+    <p>No polls are available.</p>
+  {% endif %}
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">Log In</a>
+{% endif %}
+{% endblock %}
